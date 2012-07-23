@@ -1,0 +1,15 @@
+Package: bestinbg
+Type: Package
+Title: Bayesian ESTimation of Incoherent Neutron BackGround
+Version: 0.1-0
+Date: 2012-07-23
+Author: Charles R. Hogg III
+Maintainer: Charles R. Hogg III <charles.hogg@nist.gov>
+Description: Bayesian estimation of incoherent neutron-scattering background,
+  usually from hydrogen. Accounts for low-r G(r), noise models in S(Q), and
+  uses second-derivative priors on the background curve.
+License: GPL-3
+LazyLoad: yes
+Suggests:
+    debug,geometry,rgl,Cairo,ggplot2,testthat
+Depends:
