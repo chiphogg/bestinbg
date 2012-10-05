@@ -1,15 +1,17 @@
 Package: bestinbg
-Type: Package
-Title: Bayesian ESTimation of Incoherent Neutron BackGround
-Version: 0.1-0
-Date: 2012-07-23
+Maintainer: Charles R. Hogg III <charles.r.hogg@gmail.com>
 Author: Charles R. Hogg III
-Maintainer: Charles R. Hogg III <charles.hogg@nist.gov>
-Description: Bayesian estimation of incoherent neutron-scattering background,
-  usually from hydrogen. Accounts for low-r G(r), noise models in S(Q), and
-  uses second-derivative priors on the background curve.
+Version: 0.1
 License: GPL-3
-LazyLoad: yes
-Suggests:
-    debug,geometry,rgl,Cairo,ggplot2,testthat
-Depends:
+Title: Bayesian Estimation of Incoherent Neutron scattering Backgrounds
+Description: Neutron diffraction yields detailed information about atomic
+    structure (essentially, the question "what are the atoms and how are they
+    arranged?").  This information is carried by *coherent* scattering.
+    Unfortunately, hydrogen-containing materials also contain a very strong
+    *in*coherent signal as well.  The goal of this package is to estimate this
+    incoherent signal, so we can analyze what's left and figure out where the
+    atoms are.
+Collate:
+    'dataset.R'
+    'hyperparams.R'
+    'xy.R'

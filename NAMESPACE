@@ -1,0 +1,5 @@
+S3method(new_dataset,character)
+S3method(new_dataset,numeric)
+S3method(x,dataset)
+export(is.dataset)
+export(new_dataset)
