@@ -2,7 +2,7 @@
 \alias{Psi}
 \title{Negative log of posterior}
 \usage{
-  Psi(bgr, data, calc.grad = TRUE, calc.hess = TRUE)
+  Psi(bgr, data, calc.grad = FALSE, calc.hess = FALSE)
 }
 \arguments{
   \item{bgr}{(\code{\link{background}} object) The
