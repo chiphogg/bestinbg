@@ -42,7 +42,7 @@ PsiFBgr <- function(bgr, data, calc.grad, calc.hess) {
     sigma.rep <- array(rep(sigma, each=E(bgr) ^ 2), dim=dim(PPT))
     hess <- -PPT / (sigma.rep ^ 2)
   }
-  return (list(funct=funct, grad=grad, hess=hess))
+  return (list(funct=value, grad=grad, hess=hess))
 }
 
 #' Helper function for \code{\link{PsiHSig}}
@@ -89,7 +89,7 @@ PsiHSig <- function(bgr, data, calc.grad, calc.hess) {
   qq <- z / rho - rho
   funct <- (
     log(1 - Beta(bgr))
-    - log(lambda)
+    - log(Lambda(bgr))
     + pnorm(log.p=TRUE, q=qq)
     - z
     + 0.5 * (rho ^ 2)
@@ -97,12 +97,12 @@ PsiHSig <- function(bgr, data, calc.grad, calc.hess) {
   grad <- hess <- NA
   if (calc.grad || calc.hess) {  # Calculate the gradient
     gamma.q <- GammaQ(qq=qq, rho=rho)
-    grad <- as.vector((1 - gamma.q) / lambda) * Phi(bgr, data)
+    grad <- as.vector((1 - gamma.q) / Lambda(bgr)) * Phi(bgr, data)
   }
   if (calc.hess) {               # Calculate the Hessian
-    prefactor <- as.vector(-gamma.q * (gamma.q + qq / rho) / (lambda ^ 2))
+    prefactor <- as.vector(-gamma.q * (gamma.q + qq / rho) / (Lambda(bgr) ^ 2))
     PPT <- RowOuterProduct(Phi(bgr, data))
-    prefactor.rep <- array(rep(prefactor, each=length(cc) ^ 2), dim=dim(PPT))
+    prefactor.rep <- array(rep(prefactor, each=E(bgr) ^ 2), dim=dim(PPT))
     hess <- prefactor.rep * PPT
   }
   return (list(funct=funct, grad=grad, hess=hess))

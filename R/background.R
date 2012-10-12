@@ -205,6 +205,6 @@ Eta <- function(bgr) {
 #' @param x.vals (numeric vector) x-values to evaluate the background function
 #'
 #' @export
-points.background <- function(x, x.vals, ...) {
+points.background <- function(x, x.vals=X(x), ...) {
   points(x.vals, Y(x, x.vals), ...)
 }

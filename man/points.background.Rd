@@ -2,7 +2,7 @@
 \alias{points.background}
 \title{Add a background object to a plot}
 \usage{
-  points.background(x, x.vals, ...)
+  points.background(x, x.vals = X(x), ...)
 }
 \arguments{
   \item{x}{\code{\link{background}} object to plot}

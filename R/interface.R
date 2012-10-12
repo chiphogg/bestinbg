@@ -101,6 +101,7 @@ OptimizeKnotValues <- function(bgr, data) {
     sigma <- sigma * 0.5
     bgr <- OptimizeKnotValuesInflatedNoise(bgr, data, sigma)
   }
+  return (bgr)
 }
 
 #' Random function with smooth background
