@@ -4,12 +4,24 @@
 # purpose:  Generic methods for x and y coordinates
 
 #' X-values for a function
-x <- function(obj, ...) {
-  UseMethod("x", obj)
+#'
+#' @export
+X <- function(obj, ...) {
+  UseMethod("X", obj)
+}
+#' @export
+`X<-` <- function(obj, ...) {
+  UseMethod("X<-", obj)
 }
 
 #' Y-values for a function
-y <- function(obj, ...) {
-  UseMethod("y", obj)
+#'
+#' @export
+Y <- function(obj, ...) {
+  UseMethod("Y", obj)
+}
+#' @export
+`Y<-` <- function(obj, ...) {
+  UseMethod("Y<-", obj)
 }
 

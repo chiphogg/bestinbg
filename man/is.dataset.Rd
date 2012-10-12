@@ -5,7 +5,7 @@
   is.dataset(x)
 }
 \arguments{
-  \item{x}{Object to test}
+  \item{x}{Object to test TODO}
 }
 \value{
   \code{TRUE} if this is a \code{dataset} object.

@@ -11,7 +11,15 @@ Description: Neutron diffraction yields detailed information about atomic
     *in*coherent signal as well.  The goal of this package is to estimate this
     incoherent signal, so we can analyze what's left and figure out where the
     atoms are.
+Imports:
+    trust
 Collate:
     'dataset.R'
-    'hyperparams.R'
     'xy.R'
+    'background.R'
+    'interface.R'
+    'model.R'
+    'spline.R'
+    'eta.R'
+    'bestinbg.R'
+    'optimizers.R'
